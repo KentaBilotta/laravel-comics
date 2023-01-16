@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('guest.comics', [
+        'menu' => config('menu'),
+        'comics' => config('comics'),
+    ]);
 });

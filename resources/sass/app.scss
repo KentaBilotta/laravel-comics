@@ -1,1 +1,214 @@
 //
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Roboto";
+}
+
+$footer-gray: #303030;
+$main-blue: #0282f9;
+
+// stile dell'header
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+  }
+
+  ul{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+
+    li{
+      padding: 1rem;
+      border-bottom: 5px solid white;
+      cursor: pointer;
+
+      &:hover{
+        color: $main-blue;
+        border-bottom: 5px solid $main-blue;
+      }
+
+    }
+
+  }
+
+// stile del main
+
+.jumbo{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: top;
+    margin-bottom: -4px;
+}
+
+main{
+    color: white;
+    background-color: greenyellow;
+}
+
+section{
+
+    .footer-bg-cont{
+        position: relative;
+        height: 40vh;
+
+        .footer-bg{
+            width: 100%;
+            height: 40vh;
+            object-fit: cover;
+            margin-bottom: -4px;
+        }
+    }
+
+    .footer_logo{
+        position: absolute;
+        top: 0;
+        right: 10rem;
+        height: 40vh;
+    }
+
+    .link-list{
+        position: absolute;
+        top: 0;
+        left: 10rem;
+        width: 10vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        padding: .5rem;
+
+        .item-name{
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 5px;
+          }
+      }
+
+      .item a{
+        text-decoration: none;
+        color: grey;
+        text-transform: capitalize;
+        font-size: 0.9rem;
+        font-weight: lighter;
+        padding: 3px;
+        &:hover{
+          text-decoration: underline;
+        }
+    }
+}
+
+// stile delle cards
+
+.container{
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    position: relative;
+
+    .current{
+      text-transform: uppercase;
+      background-color: $main-blue;
+      padding: 15px;
+      position: absolute;
+      top: 0;
+      left: 10%;
+      transform: translate(0, -50%);
+    }
+    .cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .load-button{
+        text-transform: uppercase;
+        background-color: $main-blue;
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid white;
+        cursor: pointer;
+        margin-top: 2rem;
+
+        &:hover{
+          background-color: white;
+          color: $main-blue;
+          border: 1px solid black;
+        }
+    }
+  }
+
+.card{
+    color: white;
+    text-transform: uppercase;
+    width: calc(100% / 8);
+    margin: 15px;
+
+    img{
+      width: 100%;
+      height: 200px;;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .title{
+      font-weight: lighter;
+      margin-top: 20px;
+    }
+  }
+
+// stile del footer
+
+footer{
+  background-color: $footer-gray;
+  height: 12vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .sign-button{
+    color: white;
+    text-transform: uppercase;
+    padding: .5rem;
+    border: 2px solid $main-blue;
+    width: fit-content;
+    cursor: pointer;
+    &:hover{
+      background-color: $main-blue;
+      color: black;
+    }
+  }
+
+  .socials{
+    display: flex;
+  }
+  .socials .follow{
+    color: $main-blue;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+
+  .icons img{
+    width: 30px;
+    margin: .5rem;
+  }
+}
